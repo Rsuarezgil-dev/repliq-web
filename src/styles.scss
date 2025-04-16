@@ -1,1 +1,136 @@
-/* You can add global styles to this file, and also import other style files */
+/* ...existing code... */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ...existing code... */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: AirbnbCerealBlack;
+    /*a name to be used later*/
+    src: url('./assets/fonts/AirbnbCerealBlack.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: AirbnbCerealBold;
+    /*a name to be used later*/
+    src: url('./assets/fonts/AirbnbCerealBold.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: AirbnbCerealBook;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/AirbnbCerealBook.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: AirbnbCerealExtraBold;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/AirbnbCerealExtraBold.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: AirbnbCerealLight;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/AirbnbCerealLight.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: Exo2-Italic-VariableFont_wght;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/Exo2-Italic-VariableFont_wght.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: Exo2-VariableFont_wght;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/Exo2-VariableFont_wght.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: Sora-VariableFont_wght;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/Sora-VariableFont_wght.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: Digital_tech;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/Digital_tech.otf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: Quicksand-VariableFont_wght;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/Quicksand-VariableFont_wght.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: Outfit-VariableFont_wght;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/Outfit-VariableFont_wght.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: Roboto-Italic-VariableFont_wdth;
+    /*a name to be used later*/
+    src: url('../src/assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf');
+    /*URL to font*/
+}
+
+/* Cambiar el fondo general de la página */
+body {
+    background-color: #111;
+    /* Fondo oscuro */
+    color: #fff;
+    /* Texto blanco por defecto */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    /* Fuente general */
+    overflow-x: hidden;
+    /* Evita el scroll horizontal */
+}
+
+/* Personalizar el scroll */
+body::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho del scroll */
+}
+
+body::-webkit-scrollbar-track {
+    background: #000000;
+    /* Fondo del track del scroll */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #111;
+    /* Color del scroll */
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #111;
+    /* Color del scroll al pasar el mouse */
+}
