@@ -7,7 +7,7 @@ import * as moment from 'moment';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  
+
   isScrolled: boolean = false; // Variable para rastrear el estado del scroll
   isHeaderFixed: boolean = false;
   isMenuOpen: boolean = false;
@@ -18,6 +18,12 @@ export class HomeComponent {
   constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.cdr.detectChanges();
+      this.playVideos();
+    }, 1000);
+
     // Inicializa el efecto de escritura al cargar el componente
     const startTyping = () => {
       this.typeEffect(
@@ -49,20 +55,31 @@ export class HomeComponent {
         }
       );
     };
-  
+
     startTyping();
 
-    setTimeout(() => {
-      this.cdr.detectChanges();
-      this.playVideos();
-  }, 1000); 
+  }
+
+
+  ngAfterViewInit(): void {
+    this.videoPlayers.forEach((videoRef) => {
+      const video = videoRef.nativeElement as HTMLVideoElement;
+
+      // Asegurar que el video esté silenciado antes de intentar reproducirlo
+      video.muted = true;
+
+      // Intentar reproducir solo cuando el video esté listo
+      video.addEventListener('canplaythrough', () => {
+        video.play().catch(error => console.warn('Reproducción bloqueada por el navegador.', error));
+      });
+    });
   }
 
   typeEffect(elementId: string, texts: string[], typingSpeed: number, callback?: () => void): void {
     const element = document.getElementById(elementId);
     let textIndex = 0;
     let charIndex = 0;
-  
+
     const type = () => {
       if (element && textIndex < texts.length) {
         if (charIndex < texts[textIndex].length) {
@@ -82,22 +99,16 @@ export class HomeComponent {
         }
       }
     };
-  
+
     type();
   }
 
   playVideos(): void {
     this.videoPlayers.forEach((videoRef) => {
       const video = videoRef.nativeElement as HTMLVideoElement;
-      
-      // Asegurar que el video esté silenciado antes de intentar reproducirlo
       video.muted = true;
-
-      // Intentar reproducir solo cuando el video esté listo
-      video.addEventListener('canplaythrough', () => {
-          video.play().catch(error => console.warn('Reproducción bloqueada por el navegador.', error));
-      });
-  });
+      video.play().catch(error => console.warn('Reproducción bloqueada. Se intentará después de una interacción del usuario.', error));
+    });
   }
 
   toggleMenu(): void {
