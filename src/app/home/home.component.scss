@@ -584,10 +584,17 @@
 }
 
 .accordion-title {
-  font-size: 2rem;
+  font-family: Quicksand-VariableFont_wght;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 1.5rem;
+}
+
+.accordion-sub-title{
+  font-family: AirbnbCerealLight;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .accordion-item {
@@ -597,6 +604,7 @@
 }
 
 .accordion-header {
+  font-family: Quicksand-VariableFont_wght;
   background-color: #222;
   color: #fff;
   padding: 1rem;
@@ -626,6 +634,7 @@
 }
 
 .accordion-content {
+  font-family: AirbnbCerealLight;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;

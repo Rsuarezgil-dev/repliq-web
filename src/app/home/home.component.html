@@ -111,6 +111,86 @@
   </div>
 </section>
 
+<section class="accordion-section">
+  <div class="accordion-container">
+    <div class="accordion-title">¿Qué te ofrecemos?</div>
+    <div class="accordion-sub-title">
+      Soluciones de simulación para decisiones más inteligentes.<br/><br/>
+      En <b>Repliq</b> ofrecemos una suite de servicios diseñados para ayudarte a tomar decisiones estratégicas con mayor precisión, menor riesgo y más velocidad. Desde el testeo de productos hasta la optimización de campañas, nuestros clientes sintéticos te permiten validar antes de lanzar.
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(0)">
+        <span>Simulación de comportamiento de clientes</span>
+        <span class="accordion-icon" [class.open]="isOpen[0]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[0]">
+        <p>
+          Modelamos perfiles digitales con IA que reaccionan como lo harían tus clientes reales. Puedes analizar cómo navegan, compran, responden a promociones o abandonan productos.
+        </p>
+        <p>
+          Ideal para: E-commerce, UX, apps, plataformas digitales.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(1)">
+        <span>Validación de campañas publicitarias</span>
+        <span class="accordion-icon" [class.open]="isOpen[1]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[1]">
+        <p>
+          Antes de invertir en medios, prueba tus anuncios con réplicas de tus audiencias. Identifica qué mensaje, diseño o canal genera más impacto según el perfil de cliente.
+        </p>
+        <p>
+          Ideal para: Equipos de marketing, agencias, startups.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(2)">
+        <span>Testeo de precios y modelos de negocio</span>
+        <span class="accordion-icon" [class.open]="isOpen[2]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[2]">
+        <p>
+          Evalúa la sensibilidad al precio y la disposición de pago por segmento. Prueba distintas estrategias (descuentos, membresías, bundles) con nuestros clientes sintéticos y encuentra el punto de equilibrio ideal.
+        </p>
+        <p>
+          Ideal para: Estrategas, CMO, growth teams.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(3)">
+        <span>Optimización de experiencia de usuario (UX)</span>
+        <span class="accordion-icon" [class.open]="isOpen[3]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[3]">
+        <p>
+          Simula journeys completos de navegación e interacción con tu sitio, app o producto digital. Detecta puntos de fricción antes del lanzamiento.
+        </p>
+        <p>
+          Ideal para: Diseñadores UX/UI, product managers.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(4)">
+        <span>Estudios personalizados por industria</span>
+        <span class="accordion-icon" [class.open]="isOpen[4]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[4]">
+        <p>
+          ¿Necesitas validar un concepto específico o explorar una hipótesis de mercado? Creamos simulaciones personalizadas para tu industria, con modelos adaptados a tu realidad de negocio.
+        </p>
+        <p>
+          Ideal para: Innovación, desarrollo de producto, I+D.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="how-it-works">
   <div class="how-it-works-container">
     <div class="how-it-works-title">
@@ -173,49 +253,19 @@
       </div>
 
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="accordion-title">¿Listo para simular tus decisiones antes de lanzarlas?</div>
+    <div class="accordion-sub-title">
+      Con <b>Repliq</b>, tu próxima estrategia ya puede ser probada hoy.
+    </div>
+
   </div>
 </section>
 
-<section class="accordion-section">
-  <div class="accordion-container">
-    <h2 class="accordion-title">Información Detallada</h2>
-    <div class="accordion-item">
-      <button class="accordion-header" (click)="toggleAccordion(0)">
-        <span>¿Qué es Repliq?</span>
-        <span class="accordion-icon" [class.open]="isOpen[0]">+</span>
-      </button>
-      <div class="accordion-content" [class.show]="isOpen[0]">
-        <p>
-          Repliq es una herramienta innovadora que permite a las empresas simular el comportamiento de clientes reales
-          antes de lanzar productos, campañas o estrategias.
-        </p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header" (click)="toggleAccordion(1)">
-        <span>¿Cómo funciona?</span>
-        <span class="accordion-icon" [class.open]="isOpen[1]">+</span>
-      </button>
-      <div class="accordion-content" [class.show]="isOpen[1]">
-        <p>
-          Utiliza inteligencia artificial y modelos sintéticos para crear perfiles hiperrealistas que reaccionan a tus
-          propuestas tal como lo haría tu mercado objetivo.
-        </p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header" (click)="toggleAccordion(2)">
-        <span>¿Qué beneficios ofrece?</span>
-        <span class="accordion-icon" [class.open]="isOpen[2]">+</span>
-      </button>
-      <div class="accordion-content" [class.show]="isOpen[2]">
-        <p>
-          Permite validar conceptos, ajustar precios y mensajes, reducir riesgos y optimizar campañas con datos reales.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <div class="divisor">
 
