@@ -795,6 +795,7 @@
   flex: 1;
   min-width: 300px;
   max-width: 400px;
+  height: 500px;
   text-align: left;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -845,6 +846,15 @@
 .plan-card:hover::before {
   filter: brightness(1.2);
   /* Aumenta el brillo al pasar el mouse */
+}
+
+.plan-card-footer{
+  width: 93%;
+  position: absolute;
+  bottom: 15px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes move-gradient {
