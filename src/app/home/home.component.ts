@@ -13,6 +13,7 @@ export class HomeComponent {
   isMenuOpen: boolean = false;
   @ViewChildren('videoPlayer') videoPlayers!: QueryList<ElementRef>;
   currentYear: string = moment().format('YYYY'); // Obtiene el año actual
+  isOpen: boolean[] = [false, false, false]; // Estado de cada acordeón
 
   constructor(private cdr: ChangeDetectorRef) { }
 
@@ -101,6 +102,10 @@ export class HomeComponent {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen; // Alterna el estado del menú
+  }
+
+  toggleAccordion(index: number): void {
+    this.isOpen[index] = !this.isOpen[index]; // Alterna el estado del acordeón seleccionado
   }
 
   @HostListener('window:scroll', [])

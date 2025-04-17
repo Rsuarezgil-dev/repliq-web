@@ -171,6 +171,47 @@
   </div>
 </section>
 
+<section class="accordion-section">
+  <div class="accordion-container">
+    <h2 class="accordion-title">Información Detallada</h2>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(0)">
+        <span>¿Qué es Repliq?</span>
+        <span class="accordion-icon" [class.open]="isOpen[0]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[0]">
+        <p>
+          Repliq es una herramienta innovadora que permite a las empresas simular el comportamiento de clientes reales
+          antes de lanzar productos, campañas o estrategias.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(1)">
+        <span>¿Cómo funciona?</span>
+        <span class="accordion-icon" [class.open]="isOpen[1]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[1]">
+        <p>
+          Utiliza inteligencia artificial y modelos sintéticos para crear perfiles hiperrealistas que reaccionan a tus
+          propuestas tal como lo haría tu mercado objetivo.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header" (click)="toggleAccordion(2)">
+        <span>¿Qué beneficios ofrece?</span>
+        <span class="accordion-icon" [class.open]="isOpen[2]">+</span>
+      </button>
+      <div class="accordion-content" [class.show]="isOpen[2]">
+        <p>
+          Permite validar conceptos, ajustar precios y mensajes, reducir riesgos y optimizar campañas con datos reales.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="divisor">
 
 </div>
