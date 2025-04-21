@@ -112,25 +112,26 @@ body {
     /* Evita el scroll horizontal */
 }
 
-/* Personalizar el scroll */
 body::-webkit-scrollbar {
-    width: 10px;
-    /* Ancho del scroll */
+    width: 15px; /* Aumenta el ancho del scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-    background: #000000;
-    /* Fondo del track del scroll */
+    background: #2c2c2c;
+    /* Fondo del track */
+    padding: 3px; /* Simula un margen interno */
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #111;
+    background: #9f9f9f;
     /* Color del scroll */
     border-radius: 5px;
     /* Bordes redondeados */
+    border: 4px solid #2c2c2c; /* Simula un margen alrededor del thumb */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: #111;
+    background: #d1d1d1;
     /* Color del scroll al pasar el mouse */
+    padding: 2px;
 }
