@@ -129,10 +129,17 @@ body::-webkit-scrollbar-thumb {
     /* Bordes redondeados */
     border: 4px solid #2c2c2c; /* Simula un margen alrededor del thumb */
     border-radius: 10px;
+    background-clip: content-box;
 }
 
 body::-webkit-scrollbar-thumb:hover {
     background: #d1d1d1;
     /* Color del scroll al pasar el mouse */
     padding: 2px;
+}
+
+/* Scrollbar para Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #9f9f9f rgba(255, 255, 255, 0.05);
 }
