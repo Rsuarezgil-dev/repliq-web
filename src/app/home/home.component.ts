@@ -14,6 +14,7 @@ export class HomeComponent {
   @ViewChildren('videoPlayer') videoPlayers!: QueryList<ElementRef>;
   currentYear: string = moment().format('YYYY'); // Obtiene el año actual
   isOpen: boolean[] = [false, false, false]; // Estado de cada acordeón
+  isChatOpen = false;
 
   constructor(private cdr: ChangeDetectorRef) { }
 
@@ -123,5 +124,9 @@ export class HomeComponent {
   onWindowScroll(): void {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     this.isScrolled = scrollPosition > 50; // Cambia el estado si el scroll supera 50px
+  }
+
+  toggleChat(): void {
+    this.isChatOpen = !this.isChatOpen;
   }
 } 

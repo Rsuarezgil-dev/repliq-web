@@ -415,3 +415,43 @@
     </div>
   </div>
 </footer>
+
+<!-- Asistente (botón de micrófono) -->
+<div class="assistant-container" (click)="toggleChat()">
+  <button class="mic-button" aria-label="Activar micrófono">
+    <img src="assets/images/asistente.png" alt="Logo Repliq" class="logo-assistant avatar" />
+  </button>
+</div>
+
+<div class="chat-container" *ngIf="isChatOpen">
+  <div class="chat-header">
+    <span>Chat Asistente</span>
+    <button class="close-button" (click)="toggleChat()">X</button>
+  </div>
+  <div class="chat-body">
+    <div class="message assistant-message">
+      <div class="avatar-message">
+        <img src="assets/images/asistente.png" alt="Samantha">
+      </div>
+      <div class="message-content">
+        <p>In convallis justo dui, nec vestibulum sem efficitur ac. Curabitur eu pharetra erat, nec facilisis felis.</p>
+        <span class="timestamp">12:26</span>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="message user-message">
+      <div class="avatar-message">
+        <img src="assets/images/avatar-jonathan.png" alt="Jonathan">
+      </div>
+      <div class="message-content">
+        <p>Curabitur eu pharetra erat, nec facilisis felis.</p>
+        <span class="timestamp">12:27</span>
+      </div>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <input type="text" placeholder="Escribe un mensaje..." style="background-color: #262626;border: none;height: 48px;width: 100%;" />
+    
+  </div>
+</div>
