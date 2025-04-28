@@ -143,3 +143,5 @@ body::-webkit-scrollbar-thumb:hover {
     scrollbar-width: thin;
     scrollbar-color: #9f9f9f rgba(255, 255, 255, 0.05);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
